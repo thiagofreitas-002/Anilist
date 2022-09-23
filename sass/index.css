@@ -8,6 +8,7 @@
   font-family: "roboto", sans-serif;
   color: #9fadbd;
   line-height: 1.15;
+  --nav-height: 68px;
 }
 
 html,
@@ -21,6 +22,11 @@ body {
   grid-template-areas: "h" "m" "f";
 }
 
+.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+  box-shadow: none;
+}
+
 header {
   background-color: #152232;
   height: 68px;
@@ -29,6 +35,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  transition: transform 300ms;
 }
 header .header__container {
   display: flex;
@@ -191,20 +201,24 @@ main .main__container .preview__header h2 {
   font-weight: 500;
 }
 main .main__container .list__preview {
+  /* width: 100%; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   background-color: #161f2e;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 85px);
+  grid-auto-rows: 115px;
   padding: 20px;
-  width: 100%;
   border-radius: 4px;
   margin-bottom: 25px;
   gap: 20px;
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 main .main__container .list__preview .card {
-  border-radius: 4px;
-  width: 85px;
-  height: 115px;
-  position: relative;
+  /* border-radius: 4px; */
+  /* width: 85px; */
+  /* height: 115px; */
+  /* position: relative; */
 }
 main .main__container .list__preview .card a {
   background-image: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx129196-eARf1qEerqIm.jpg");
@@ -215,6 +229,7 @@ main .main__container .list__preview .card a {
   width: 100%;
   min-height: 115px;
   border-radius: 4px;
+  position: relative;
 }
 main .main__container .list__preview .card a .image__text {
   position: absolute;
@@ -234,34 +249,34 @@ main .main__container .home__content {
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
-main .main__container .home__content h2 {
+main .main__container .home__content .home__aside h2 {
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 10px;
   padding-left: 12px;
 }
-main .main__container .home__content .forum__item {
+main .main__container .home__content .home__aside .forum__item {
   background-color: #161f2e;
   border-radius: 3px;
   padding: 18px;
   margin-bottom: 15px;
   position: relative;
 }
-main .main__container .home__content .forum__item .fa-eye {
+main .main__container .home__content .home__aside .forum__item .fa-eye {
   position: absolute;
   top: 9px;
   right: 100px;
   color: #8597a5;
   font-size: 0.6rem;
 }
-main .main__container .home__content .forum__item .fa-comments {
+main .main__container .home__content .home__aside .forum__item .fa-comments {
   position: absolute;
   top: 9px;
   right: 50px;
   color: #8597a5;
   font-size: 0.6rem;
 }
-main .main__container .home__content .reviews__cards {
+main .main__container .home__content .home__aside .reviews__cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 200px;
@@ -269,14 +284,14 @@ main .main__container .home__content .reviews__cards {
   border-radius: 3px;
   margin-bottom: 25px;
 }
-main .main__container .home__content .reviews__cards .reviews__card {
+main .main__container .home__content .home__aside .reviews__cards .reviews__card {
   background-color: #161f2e;
   grid-template-rows: 80px auto;
   display: grid;
   overflow: hidden;
   border-radius: 4px;
 }
-main .main__container .home__content .reviews__cards .reviews__card .banner {
+main .main__container .home__content .home__aside .reviews__cards .reviews__card .banner {
   background-image: url("https://cdn.waifu.im/3864.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -285,27 +300,27 @@ main .main__container .home__content .reviews__cards .reviews__card .banner {
   position: relative;
   /*todo ARRUMAR OVERLAY */
 }
-main .main__container .home__content .reviews__cards .reviews__card .banner .read__review {
+main .main__container .home__content .home__aside .reviews__cards .reviews__card .banner .read__review {
   position: absolute;
   top: 0;
   width: 100%;
   height: 80px;
 }
-main .main__container .home__content .reviews__cards .reviews__card .content {
+main .main__container .home__content .home__aside .reviews__cards .reviews__card .content {
   padding: 13px 15px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   position: relative;
 }
-main .main__container .home__content .reviews__cards .reviews__card .content .fa-thumbs-up {
+main .main__container .home__content .home__aside .reviews__cards .reviews__card .content .fa-thumbs-up {
   position: absolute;
   bottom: 10px;
   right: 10px;
   color: #8597a5;
   font-size: 0.9rem;
 }
-main .main__container .home__content .reviews__cards .reviews__card .content .fa-thumbs-up::after {
+main .main__container .home__content .home__aside .reviews__cards .reviews__card .content .fa-thumbs-up::after {
   margin-left: 8px;
   content: "21";
   font-size: 0.8rem;
@@ -353,4 +368,12 @@ footer .footer__container {
 .fa-play,
 .fa-book-open {
   color: tomato;
+}
+
+.triangulo {
+  width: 0;
+  height: 0;
+  border-top: 100px solid tomato;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
 }/*# sourceMappingURL=index.css.map */
