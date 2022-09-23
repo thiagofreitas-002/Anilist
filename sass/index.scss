@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "roboto", sans-serif;
+  color: #9fadbd;
+  line-height: 1.15;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "h"
+    "m"
+    "f";
+}
+
+header {
+  background-color: #152232;
+  height: 68px;
+  grid-area: h;
+  color: #a0b1c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1050px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    .header__content {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+
+      .header__logo {
+        width: 65px;
+        height: 55px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      .links {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "overpass", sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+
+        .browser__dropdown {
+          position: relative;
+
+          .dropdown {
+            transition: 200ms ease-in;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            position: absolute;
+            min-width: 270px;
+            height: 203px; /* LEMBRAR DE REMOVER */
+            z-index: 100;
+            left: -5px;
+
+            .dropdown__links {
+              background-color: #161f2e;
+              border-radius: 6px 6px 0px 0px;
+              width: 100%;
+              padding: 21px 27px;
+              height: 75%; /* TEMP */
+
+              .primary__link {
+                margin-bottom: 10px;
+                display: flex;
+
+                &:last-child {
+                  margin-bottom: 0px;
+                }
+              }
+            }
+
+            .dropdown__footer {
+              background-color: #0c1622;
+              border-radius: 0px 0px 6px 6px;
+              width: 100%;
+              padding: 16px 27px;
+            }
+          }
+
+          &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+          }
+        }
+
+        .link {
+          color: #a0b1c5;
+          padding: 18px 16px;
+          letter-spacing: 0.01em;
+          display: inline-block;
+          transition: ease-in-out 100ms;
+          font-weight: 500;
+
+          &:hover {
+            color: #d3d5f3;
+          }
+        }
+      }
+    }
+
+    .search {
+      margin-right: 15px;
+      font-size: 1.1rem;
+
+      .fa-search {
+        color: #777a9e;
+        line-height: 0.75em;
+        transition: ease-in-out 200ms;
+
+        &:hover {
+          color: #a0b1c5;
+        }
+      }
+    }
+
+    .header__profile {
+      display: inline-flex;
+      align-items: center;
+      height: 55px;
+      width: 65px;
+
+      .user {
+        width: 38px;
+        height: 38px;
+        position: relative;
+
+        a {
+          display: inline-block;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+
+        .notification {
+          background-color: rgb(250, 122, 122);
+          border-radius: 50%;
+          color: #fff2f2;
+          display: inline-block;
+          font-size: 0.8rem;
+          font-weight: 500;
+          height: 20px;
+          width: 20px;
+          line-height: 20px;
+          overflow: hidden;
+          padding-right: 1px;
+          text-align: center;
+          position: absolute;
+          bottom: 9px;
+          left: 48px;
+          transition: 200ms linear;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  background-color: #0c1622;
+  grid-area: m;
+  min-height: 100vh;
+
+  .main__container {
+    width: 100%;
+    max-width: 1150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    .preview__header {
+      padding-left: 12px;
+      margin-bottom: 10px;
+      width: 100%;
+
+      h2 {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+
+    .list__preview {
+      background-color: #161f2e;
+      padding: 20px;
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 25px;
+      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .card {
+        border-radius: 4px;
+        width: 85px;
+        height: 115px;
+        position: relative;
+
+        a {
+          background-image: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx129196-eARf1qEerqIm.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          display: inline-block;
+          width: 100%;
+          min-height: 115px;
+          border-radius: 4px;
+
+          .image__text {
+            position: absolute;
+            background-color: rgba(31, 38, 49, 0.7);
+            width: 100%;
+            height: 41%;
+            bottom: 0;
+            padding: 8px;
+            text-align: center;
+            color: white;
+            font-size: 0.8rem;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .home__content {
+      display: grid;
+      grid-template-columns: 4fr 3fr;
+      column-gap: 40px;
+
+      h2 {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding-left: 12px;
+      }
+
+      .forum__item {
+        background-color: #161f2e;
+        border-radius: 3px;
+        padding: 18px;
+        margin-bottom: 15px;
+        position: relative;
+
+        .fa-eye {
+          position: absolute;
+          top: 9px;
+          right: 100px;
+          color: #8597a5;
+          font-size: .6rem;
+        }
+
+        .fa-comments {
+          position: absolute;
+          top: 9px;
+          right: 50px;
+          color: #8597a5;
+          font-size: .6rem;
+        }
+      }
+
+      .reviews__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+        gap: 22px;
+        border-radius: 3px;
+        margin-bottom: 25px;
+
+        .reviews__card {
+          background-color: #161f2e;
+          grid-template-rows: 80px auto;
+          display: grid;
+          overflow: hidden;
+          border-radius: 4px;
+
+          .banner {
+            background-image: url("https://cdn.waifu.im/3864.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            position: relative;
+
+            /*todo ARRUMAR OVERLAY */
+            .read__review {
+              position: absolute;
+              top: 0;
+              width: 100%;
+              height: 80px;
+            }
+          }
+
+          .content {
+            padding: 13px 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+
+            .fa-thumbs-up {
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+              color: #8597a5;
+              font-size: 0.9rem;
+
+              &::after {
+                margin-left: 8px;
+                content: "21";
+                font-size: .8rem;
+                font-weight: 400;
+                font-family: 'roboto', sans-serif;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1040px) and (max-width: 1540px) {
+    .main__container {
+      width: 100%;
+      max-width: 1140px;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin: 0 auto;
+      padding-top: 38px;
+    }
+  }
+
+  @media (min-width: 1540px) {
+    .main__container {
+      width: 100%;
+      max-width: 1520px;
+      padding-left: 100px;
+      padding-right: 100px;
+      margin: 0 auto;
+      padding-top: 38px;
+    }
+  }
+}
+
+footer {
+  background-color: #11161c;
+  height: 100px;
+  grid-area: f;
+  color: #a0b1c5;
+  font-family: "overpass", sans-serif;
+  font-weight: 600;
+  text-align: left;
+  padding-top: 20px;
+  padding: 50px 30px;
+
+  .footer__container {
+    width: 100%;
+    max-width: 1140px;
+    margin-top: 60px;
+  }
+}
+
+.fa-play,
+.fa-book-open {
+  color: tomato;
+}
