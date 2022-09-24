@@ -190,12 +190,12 @@ main .main__container {
   padding-bottom: 60px;
   margin-top: 68px;
 }
-main .main__container .main__previews .preview__header {
+main .main__container .main__previews .main__preview--header {
   padding-left: 12px;
   margin-bottom: 10px;
   width: 100%;
 }
-main .main__container .main__previews .preview__header h2 {
+main .main__container .main__previews .main__preview--header h2 {
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -241,48 +241,57 @@ main .main__container .main__previews .list__preview .card a .image__text {
   font-size: 0.8rem;
   text-transform: capitalize;
 }
-main .main__container .main__waifus {
+main .main__container .main__waifus .main__waifus--header {
+  padding-left: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+main .main__container .main__waifus .main__waifus--header h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+main .main__container .main__waifus .main__waifus--background {
   background-color: #161f2e;
   padding: 20px;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px;
   overflow: auto;
   max-height: 85vh;
   margin-bottom: 25px;
   scroll-behavior: smooth;
+  /* &::-webkit-scrollbar-track {
+    background-color: #ddd;
+    border-radius: 20px;
+  } */
 }
-main .main__container .main__waifus::-webkit-scrollbar {
-  width: 8px;
+main .main__container .main__waifus .main__waifus--background::-webkit-scrollbar {
+  width: 6px;
 }
-main .main__container .main__waifus::-webkit-scrollbar-track {
-  background-color: #ddd;
-  border-radius: 20px;
-}
-main .main__container .main__waifus::-webkit-scrollbar-thumb {
+main .main__container .main__waifus .main__waifus--background::-webkit-scrollbar-thumb {
   background-color: #9fadbd;
   border-radius: 20px;
   -webkit-transition: 200ms ease-in;
   transition: 200ms ease-in;
 }
-main .main__container .main__waifus::-webkit-scrollbar-thumb:active {
+main .main__container .main__waifus .main__waifus--background::-webkit-scrollbar-thumb:active {
   background-color: #8597a5;
 }
-main .main__container .main__waifus .main__waifus--wrapper {
+main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-main .main__container .main__waifus .main__waifus--wrapper .waifus {
+main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus {
   background-color: #161f2e;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-main .main__container .main__waifus .main__waifus--wrapper .waifus .waifu {
+main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu {
   border-radius: 8px;
   overflow: hidden;
 }
-main .main__container .main__waifus .main__waifus--wrapper .waifus .waifu .waifu__image {
+main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image {
   -o-object-fit: fill;
      object-fit: fill;
   max-width: 100%;
@@ -290,7 +299,7 @@ main .main__container .main__waifus .main__waifus--wrapper .waifus .waifu .waifu
   transition: 200ms ease-in-out;
   cursor: pointer;
 }
-main .main__container .main__waifus .main__waifus--wrapper .waifus .waifu .waifu__image:hover {
+main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image:hover {
   transform: scale(1.1);
 }
 main .main__container .home__content {
