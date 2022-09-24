@@ -191,16 +191,16 @@ main .main__container {
   padding-bottom: 60px;
   margin-top: 68px;
 }
-main .main__container .preview__header {
+main .main__container .main__previews .preview__header {
   padding-left: 12px;
   margin-bottom: 10px;
   width: 100%;
 }
-main .main__container .preview__header h2 {
+main .main__container .main__previews .preview__header h2 {
   font-size: 0.9rem;
   font-weight: 500;
 }
-main .main__container .list__preview {
+main .main__container .main__previews .list__preview {
   /* width: 100%; */
   /* display: flex; */
   /* flex-wrap: wrap; */
@@ -214,13 +214,13 @@ main .main__container .list__preview {
   gap: 20px;
   justify-content: center;
 }
-main .main__container .list__preview .card {
+main .main__container .main__previews .list__preview .card {
   /* border-radius: 4px; */
   /* width: 85px; */
   /* height: 115px; */
   /* position: relative; */
 }
-main .main__container .list__preview .card a {
+main .main__container .main__previews .list__preview .card a {
   background-image: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx129196-eARf1qEerqIm.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -231,7 +231,7 @@ main .main__container .list__preview .card a {
   border-radius: 4px;
   position: relative;
 }
-main .main__container .list__preview .card a .image__text {
+main .main__container .main__previews .list__preview .card a .image__text {
   position: absolute;
   background-color: rgba(31, 38, 49, 0.7);
   width: 100%;
@@ -242,6 +242,23 @@ main .main__container .list__preview .card a .image__text {
   color: white;
   font-size: 0.8rem;
   text-transform: capitalize;
+}
+main .main__container .main__waifus {
+  background-color: #161f2e;
+  border-radius: 3px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  overflow: hidden;
+}
+main .main__container .main__waifus .waifu .waifu__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 main .main__container .home__content {
   display: grid;
