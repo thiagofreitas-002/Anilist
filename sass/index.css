@@ -212,7 +212,6 @@ main .main__container .main__previews .list__preview {
   border-radius: 4px;
   margin-bottom: 25px;
   gap: 20px;
-  justify-content: center;
 }
 main .main__container .main__previews .list__preview .card {
   /* border-radius: 4px; */
@@ -245,20 +244,35 @@ main .main__container .main__previews .list__preview .card a .image__text {
 }
 main .main__container .main__waifus {
   background-color: #161f2e;
-  border-radius: 3px;
   padding: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+main .main__container .main__waifus .main__waifus--wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  justify-content: center;
+}
+main .main__container .main__waifus .main__waifus--wrapper .waifus {
+  background-color: #161f2e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .main__container .main__waifus .main__waifus--wrapper .waifus .waifu {
+  border-radius: 8px;
   overflow: hidden;
 }
-main .main__container .main__waifus .waifu .waifu__image {
-  -o-object-fit: cover;
-     object-fit: cover;
+main .main__container .main__waifus .main__waifus--wrapper .waifus .waifu .waifu__image {
+  -o-object-fit: fill;
+     object-fit: fill;
   max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  transition: 200ms ease-in-out;
+}
+main .main__container .main__waifus .main__waifus--wrapper .waifus .waifu .waifu__image:hover {
+  transform: scale(1.1);
 }
 main .main__container .home__content {
   display: grid;
