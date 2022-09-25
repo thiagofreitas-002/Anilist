@@ -252,12 +252,15 @@ main .main__container .main__waifus .main__waifus--header h2 {
 }
 main .main__container .main__waifus .main__waifus--background {
   background-color: #161f2e;
-  padding: 20px;
+  padding-right: 14px;
   border-radius: 4px;
   overflow: auto;
-  max-height: 85vh;
+  height: 700px;
   margin-bottom: 25px;
   scroll-behavior: smooth;
+  border-top: 20px solid #161f2e;
+  border-left: 20px solid #161f2e;
+  border-bottom: 20px solid #161f2e;
   /* &::-webkit-scrollbar-track {
     background-color: #ddd;
     border-radius: 20px;
@@ -297,10 +300,50 @@ main .main__container .main__waifus .main__waifus--background .main__waifus--wra
   max-width: 100%;
   height: 100%;
   transition: 200ms ease-in-out;
+  transform: scale(1.1);
   cursor: pointer;
 }
 main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image:hover {
+  transform: scale(1);
+}
+main .main__container .main__waifus .main__waifus--background .waifu__gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 275px;
+  grid-template-areas: "a b c d" "a b c d" "a b e e" "f g h i" "f g h i" "j j h i" "k l m n" "k l m n" "o p q r" "o p q r" "o p s s" "w v u t" "w v u t" "x x u t" "y y z z" "y y z z";
+  gap: 20px;
+}
+main .main__container .main__waifus .main__waifus--background .waifu__gallery .image {
+  overflow: hidden;
+  border-radius: 8px;
+}
+main .main__container .main__waifus .main__waifus--background .waifu__gallery .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
   transform: scale(1.1);
+}
+main .main__container .main__waifus .main__waifus--background .waifu__gallery .image img:hover {
+  transform: scale(1);
+}
+main .main__container .main__waifus .main__waifus--background .btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+main .main__container .main__waifus .main__waifus--background .btn__more {
+  padding: 12px 8px;
+  background-color: #0c1622;
+  border-radius: 4px;
+  transition: 200ms ease-in;
+}
+main .main__container .main__waifus .main__waifus--background .btn__more:hover {
+  background-color: #11161c;
+  color: #d3d5f3;
 }
 main .main__container .home__content {
   display: grid;

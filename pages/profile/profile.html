@@ -1,20 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <title>Anilist</title>
-</head>
-<body>
-  <div class="wraper">
-    <div class="container">
-      <header></header>
-      <main></main>
-      <footer></footer>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Anilist - Waifus</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--! HEADER -->
+      <header id="navbar" class="">
+        <div class="header__container">
+          <div class="header__content">
+            <a class="header__logo" href="../../index.html">
+              <img src="../../assets/anilist__logo.svg" alt="anilist logo" />
+            </a>
+
+            <div class="links">
+              <a class="link" href="../../index.html">Home</a>
+              <a class="link" href="../profile/profile.html"> Profile </a>
+              <a class="link" href="../anime-list/anime-list.html">
+                Anime List
+              </a>
+              <a class="link" href="../manga-list/manga-list.html">
+                Manga List
+              </a>
+              <span class="browser__dropdown">
+                <a class="link" href="../browse/browse.html">Browse</a>
+                <div class="dropdown">
+                  <div class="dropdown__links">
+                    <!--! ANIME -->
+                    <div class="primary__link">
+                      <a href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                      </a>
+                      <section>
+                        <a href="">Anime</a>
+                        <div class="secondary__links">
+                          <a href="#">Top 100</a>
+                          <a href="#">Trending</a>
+                          <a href="#">Top Movies</a>
+                        </div>
+                      </section>
+                    </div>
+
+                    <!--! MANGA -->
+                    <div class="primary__link">
+                      <a href="#"
+                        ><i class="fa fa-book-open" aria-hidden="true"></i
+                      ></a>
+                      <section>
+                        <a href="">Manga</a>
+                        <div class="secondary__links">
+                          <a href="#">Top 100</a>
+                          <a href="#">Trending</a>
+                          <a href="#">Top Movies</a>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+
+                  <div class="dropdown__footer">a</div>
+                </div>
+              </span>
+              <a class="link" href="../forum/forum.html">Forum</a>
+            </div>
+
+            <div class="search">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+
+            <div class="header__profile">
+              <div class="user">
+                <a href="pages/profile/profile.html">
+                  <img
+                    class="profile__img"
+                    src="https://i.pinimg.com/736x/e7/fe/70/e7fe701cff4a18cdd05ae67b79ef8376.jpg"
+                    alt="image"
+                  />
+                </a>
+                <a class="notification" href="">1</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--! MAIN  -->
+      <main>
+        <div class="main__container"></div>
+      </main>
+
+      <!--! FOOTER -->
+      <footer>
+        <div class="footer__container">
+          <div class="footer__content"></div>
+        </div>
+      </footer>
     </div>
-  </div>
-</body>
+
+    <script src="../../js/main.js"></script>
+  </body>
 </html>
