@@ -466,6 +466,25 @@ main .main__container .home__content .home__aside .main__waifus .main__waifus--w
     margin-top: 68px;
   }
 }
+@media (max-width: 756px) {
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  main .main__container .main__waifus .main__waifus--background .waifu__gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  main .main__container .home__content {
+    grid-template-columns: 1fr;
+    background-color: tomato;
+    height: 100px;
+  }
+  main .main__container .home__content .home__aside {
+    display: none;
+  }
+}
 
 footer {
   background-color: #11161c;

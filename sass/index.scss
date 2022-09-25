@@ -555,6 +555,35 @@ main {
       margin-top: 68px;
     }
   }
+
+  @media (max-width: 756px) {
+    .main__container {
+      .main__waifus {
+        .main__waifus--background {
+          .main__waifus--wrapper {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .waifu__gallery {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      .home__content {
+        grid-template-columns: 1fr;
+        background-color: tomato;
+        height: 100px;
+
+        .home__aside {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 footer {
