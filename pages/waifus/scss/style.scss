@@ -211,6 +211,33 @@ main {
     width: 100%;
     margin-top: 68px;
     min-height: 100vh;
+
+    .waifus__content {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+
+      .waifu__column {
+        display: flex;
+        flex-direction: column;
+        
+        .waifu__image {
+          overflow: hidden;
+          
+          .image {
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            transform: scale(1.1);
+            
+            &:hover {
+              transform: scale(1.0);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
