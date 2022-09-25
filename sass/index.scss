@@ -465,6 +465,7 @@ main {
           .reviews__card {
             background-color: #161f2e;
             grid-template-rows: 80px auto;
+            grid-auto-columns: 100%;
             display: grid;
             overflow: hidden;
             border-radius: 4px;
