@@ -287,7 +287,7 @@ main .main__container .main__waifus .main__waifus--background .main__waifus--wra
   background-color: #161f2e;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
 }
 main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu {
@@ -295,16 +295,16 @@ main .main__container .main__waifus .main__waifus--background .main__waifus--wra
   overflow: hidden;
 }
 main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image {
-  -o-object-fit: fill;
-     object-fit: fill;
-  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
   height: 100%;
   transition: 200ms ease-in-out;
-  transform: scale(1.1);
+  transform: scale(1.7);
   cursor: pointer;
 }
 main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image:hover {
-  transform: scale(1);
+  transform: scale(1.2);
 }
 main .main__container .main__waifus .main__waifus--background .waifu__gallery {
   margin-top: 20px;
@@ -325,7 +325,7 @@ main .main__container .main__waifus .main__waifus--background .waifu__gallery .i
   height: 100%;
   transition: 200ms ease-in-out;
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 main .main__container .main__waifus .main__waifus--background .waifu__gallery .image img:hover {
   transform: scale(1);
@@ -351,7 +351,7 @@ main .main__container .home__content {
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
-main .main__container .home__content .home__aside h2 {
+main .main__container .home__content .home__aside .header__aside {
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 10px;
@@ -380,7 +380,7 @@ main .main__container .home__content .home__aside .forum__item .fa-comments {
 }
 main .main__container .home__content .home__aside .reviews__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 200px;
   gap: 22px;
   border-radius: 3px;
@@ -389,7 +389,6 @@ main .main__container .home__content .home__aside .reviews__cards {
 main .main__container .home__content .home__aside .reviews__cards .reviews__card {
   background-color: #161f2e;
   grid-template-rows: 80px auto;
-  grid-auto-columns: 100%;
   display: grid;
   overflow: hidden;
   border-radius: 4px;
@@ -414,7 +413,18 @@ main .main__container .home__content .home__aside .reviews__cards .reviews__card
   display: flex;
   justify-content: center;
   flex-direction: column;
+  word-break: break-all;
   position: relative;
+  font-size: 0.8rem;
+}
+main .main__container .home__content .home__aside .reviews__cards .reviews__card .content .header {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+main .main__container .home__content .home__aside .reviews__cards .reviews__card .content .summary {
+  font-style: italic;
+  font-weight: 300;
 }
 main .main__container .home__content .home__aside .reviews__cards .reviews__card .content .fa-thumbs-up {
   position: absolute;
@@ -430,61 +440,31 @@ main .main__container .home__content .home__aside .reviews__cards .reviews__card
   font-weight: 400;
   font-family: "roboto", sans-serif;
 }
-main .main__container .home__content .home__aside .main__waifus {
-  max-height: -webkit-min-content;
-  max-height: -moz-min-content;
-  max-height: min-content;
-}
-main .main__container .home__content .home__aside .main__waifus .main__waifus--wrapper {
+main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper {
+  padding: 20px;
+  background-color: #161f2e;
+  border-radius: 4px;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
 }
-main .main__container .home__content .home__aside .main__waifus .main__waifus--wrapper .waifus {
-  gap: 0;
+main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column {
+  display: flex;
+  flex-wrap: wrap;
 }
-main .main__container .home__content .home__aside .main__waifus .main__waifus--wrapper .waifus .waifu {
-  border-radius: 0;
+main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column .waifu {
+  overflow: hidden;
 }
-@media (min-width: 1040px) and (max-width: 1540px) {
-  main .main__container {
-    width: 100%;
-    max-width: 1140px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin: 0 auto;
-    padding-top: 38px;
-    margin-top: 68px;
-  }
+main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column .waifu .image {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: 100%;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.7);
 }
-@media (min-width: 1540px) {
-  main .main__container {
-    width: 100%;
-    max-width: 1520px;
-    padding-left: 100px;
-    padding-right: 100px;
-    margin: 0 auto;
-    padding-top: 38px;
-    margin-top: 68px;
-  }
-}
-@media (max-width: 756px) {
-  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  main .main__container .main__waifus .main__waifus--background .waifu__gallery {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  main .main__container .home__content {
-    grid-template-columns: 1fr;
-    background-color: tomato;
-    height: 100px;
-  }
-  main .main__container .home__content .home__aside {
-    display: none;
-  }
+main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column .waifu .image:hover {
+  transform: scale(1.2);
 }
 
 footer {
@@ -523,4 +503,59 @@ footer .footer__container .footer__content {
   border-top: 100px solid tomato;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
+}
+
+@media (max-width: 765px) {
+  header .header__container .header__content {
+    justify-content: center;
+  }
+  header .header__container .header__content .links {
+    display: none;
+  }
+  header .header__container .search {
+    display: none;
+  }
+  header .header__container .header__profile {
+    display: none;
+  }
+}
+@media (min-width: 1040px) and (max-width: 1540px) {
+  main .main__container {
+    width: 100%;
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+    padding-top: 38px;
+    margin-top: 68px;
+  }
+}
+@media (min-width: 1540px) {
+  main .main__container {
+    width: 100%;
+    max-width: 1520px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0 auto;
+    padding-top: 38px;
+    margin-top: 68px;
+  }
+}
+@media (max-width: 756px) {
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .main__container .main__waifus .main__waifus--background .waifu__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    grid-template-areas: "a b c" "a b c" "d e f" "d e f" "g h i" "g h i" "j k l" "j k l" "m n o" "m n o" "p q r" "p q r" "s t u" "s t u" "v w x" "v w x" "y y z" "y y z";
+  }
+  main .main__container .home__content {
+    grid-template-columns: 1fr;
+    background-color: tomato;
+    height: 100px;
+  }
+  main .main__container .home__content .home__aside {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

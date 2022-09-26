@@ -328,7 +328,7 @@ main {
             background-color: #161f2e;
             overflow: hidden;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             gap: 20px;
 
             .waifu {
@@ -336,15 +336,15 @@ main {
               overflow: hidden;
 
               .waifu__image {
-                object-fit: fill;
-                max-width: 100%;
+                object-fit: contain;
+                width: 100%;
                 height: 100%;
                 transition: 200ms ease-in-out;
-                transform: scale(1.1);
+                transform: scale(1.7);
                 cursor: pointer;
 
                 &:hover {
-                  transform: scale(1);
+                  transform: scale(1.2);
                 }
               }
             }
@@ -385,7 +385,7 @@ main {
               height: 100%;
               transition: 200ms ease-in-out;
               cursor: pointer;
-              transform: scale(1.1);
+              transform: scale(1.5);
 
               &:hover {
                 transform: scale(1);
@@ -423,7 +423,7 @@ main {
       }
 
       .home__aside {
-        h2 {
+        .header__aside {
           font-size: 0.9rem;
           font-weight: 500;
           margin-bottom: 10px;
@@ -456,7 +456,7 @@ main {
 
         .reviews__cards {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(2, 1fr);
           grid-auto-rows: 200px;
           gap: 22px;
           border-radius: 3px;
@@ -465,7 +465,6 @@ main {
           .reviews__card {
             background-color: #161f2e;
             grid-template-rows: 80px auto;
-            grid-auto-columns: 100%;
             display: grid;
             overflow: hidden;
             border-radius: 4px;
@@ -492,7 +491,20 @@ main {
               display: flex;
               justify-content: center;
               flex-direction: column;
+              word-break: break-all;
               position: relative;
+              font-size: 0.8rem;
+
+              .header {
+                font-size: 0.8rem;
+                font-weight: 500;
+                margin-bottom: 8px;
+              }
+
+              .summary {
+                font-style: italic;
+                font-weight: 300;
+              }
 
               .fa-thumbs-up {
                 position: absolute;
@@ -513,74 +525,36 @@ main {
           }
         }
 
-        .main__waifus {
-          max-height: min-content;
-
-          .main__waifus--wrapper {
+        .home__waifus {
+          .home__waifus--wrapper {
+            padding: 20px;
+            background-color: #161f2e;
+            border-radius: 4px;
+            display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 0;
 
-            .waifus {
-              gap: 0;
+            .home__waifus--column {
+              display: flex;
+              flex-wrap: wrap;
 
               .waifu {
-                border-radius: 0;
+                overflow: hidden;
+
+                .image {
+                  object-fit: fill;
+                  width: 100%;
+                  height: 100%;
+                  transition: 200ms ease-in-out;
+                  cursor: pointer;
+                  transform: scale(1.7);
+
+                  &:hover {
+                    transform: scale(1.2);
+                  }
+                }
               }
             }
           }
-        }
-      }
-    }
-  }
-
-  @media (min-width: 1040px) and (max-width: 1540px) {
-    .main__container {
-      width: 100%;
-      max-width: 1140px;
-      padding-left: 50px;
-      padding-right: 50px;
-      margin: 0 auto;
-      padding-top: 38px;
-      margin-top: 68px;
-    }
-  }
-
-  @media (min-width: 1540px) {
-    .main__container {
-      width: 100%;
-      max-width: 1520px;
-      padding-left: 100px;
-      padding-right: 100px;
-      margin: 0 auto;
-      padding-top: 38px;
-      margin-top: 68px;
-    }
-  }
-
-  @media (max-width: 756px) {
-    .main__container {
-      .main__waifus {
-        .main__waifus--background {
-          .main__waifus--wrapper {
-            display: flex;
-            flex-direction: column;
-          }
-
-          .waifu__gallery {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-          }
-        }
-      }
-
-      .home__content {
-        grid-template-columns: 1fr;
-        background-color: tomato;
-        height: 100px;
-
-        .home__aside {
-          display: none;
         }
       }
     }
@@ -625,6 +599,104 @@ footer {
   border-top: 100px solid tomato;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
+}
+
+@media (max-width: 765px) {
+  header {
+    .header__container {
+      .header__content {
+        justify-content: center;
+
+        .links {
+          display: none;
+        }
+      }
+
+      .search {
+        display: none;
+      }
+
+      .header__profile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1040px) and (max-width: 1540px) {
+  main {
+    .main__container {
+      width: 100%;
+      max-width: 1140px;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin: 0 auto;
+      padding-top: 38px;
+      margin-top: 68px;
+    }
+  }
+}
+
+@media (min-width: 1540px) {
+  main {
+    .main__container {
+      width: 100%;
+      max-width: 1520px;
+      padding-left: 100px;
+      padding-right: 100px;
+      margin: 0 auto;
+      padding-top: 38px;
+      margin-top: 68px;
+    }
+  }
+}
+
+@media (max-width: 756px) {
+  main {
+    .main__container {
+      .main__waifus {
+        .main__waifus--background {
+          .main__waifus--wrapper {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .waifu__gallery {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 200px;
+            grid-template-areas:
+              "a b c"
+              "a b c"
+              "d e f"
+              "d e f"
+              "g h i"
+              "g h i"
+              "j k l"
+              "j k l"
+              "m n o"
+              "m n o"
+              "p q r"
+              "p q r"
+              "s t u"
+              "s t u"
+              "v w x"
+              "v w x"
+              "y y z"
+              "y y z";
+          }
+        }
+      }
+
+      .home__content {
+        grid-template-columns: 1fr;
+        background-color: tomato;
+        height: 100px;
+
+        .home__aside {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 //! CRIAÇÃO DO EFEITO DA NAVBAR SUMINDO >>> https://codepen.io/dcode-software/pen/rNmPyXq >>> https://www.youtube.com/watch?v=Q_XZk5Vnujw&ab_channel=dcode
