@@ -1,3 +1,4 @@
+<!--! CTRL + CLICK NA CLASSE MOSTRA OS ATRIBUTOS DA CLASSE -->
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -1147,7 +1148,7 @@
 
               <!--? RECENT REVIEWS -->
               <div class="home__reviews">
-                <h2>Recent Reviews</h2>
+                <h2 class="header__aside">Recent Reviews</h2>
                 <div class="reviews__cards">
                   <!--* CARD 1 -->
                   <a href="#" class="reviews__card">
@@ -1156,8 +1157,12 @@
                       <div class="read__review"></div>
                     </div>
                     <div class="content">
-                      <div>Review of {animeName} by {userName}</div>
-                      <div>{text} asdasdfagaergaergagaregaergaergre</div>
+                      <h2 class="header">
+                        Review of {animeName} by {userName}
+                      </h2>
+                      <p class="summary">
+                        {text} asdasdfagaergaergagaregaergaergre
+                      </p>
                       <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                     </div>
                   </a>
@@ -1168,8 +1173,12 @@
                       <div class="read__review"></div>
                     </div>
                     <div class="content">
-                      <h3></h3>
-                      <p></p>
+                      <h2 class="header">
+                        Review of {animeName} by {userName}
+                      </h2>
+                      <p class="summary">
+                        {text} asdasdfagaergaergagaregaergaergre
+                      </p>
                       <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                     </div>
                   </a>
@@ -1180,8 +1189,12 @@
                       <div class="read__review"></div>
                     </div>
                     <div class="content">
-                      <h3></h3>
-                      <p></p>
+                      <h2 class="header">
+                        Review of {animeName} by {userName}
+                      </h2>
+                      <p class="summary">
+                        {text} asdasdfagaergaergagaregaergaergre
+                      </p>
                       <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                     </div>
                   </a>
@@ -1192,8 +1205,12 @@
                       <div class="read__review"></div>
                     </div>
                     <div class="content">
-                      <h3></h3>
-                      <p></p>
+                      <h2 class="header">
+                        Review of {animeName} by {userName}
+                      </h2>
+                      <p class="summary">
+                        {text} asdasdfagaergaergagaregaergaergre
+                      </p>
                       <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                     </div>
                   </a>
@@ -1202,7 +1219,7 @@
 
               <!--? TRENDING ANIME & MANGA -->
               <div class="home__trending">
-                <h2>Trending Anime & Manga</h2>
+                <h2 class="header__aside">Trending Anime & Manga</h2>
                 <div class="cards">
                   <!--* CARD 1 - TRENDING-->
                   <div class="card trending"></div>
@@ -1223,7 +1240,7 @@
 
               <!--? NEWLY ADDED ANIME -->
               <div class="home__anime">
-                <h2>Newly Added Anime</h2>
+                <h2 class="header__aside">Newly Added Anime</h2>
                 <div class="cards">
                   <!--* CARD 1 - NEW-ANIME-->
                   <div class="card newAnime"></div>
@@ -1244,7 +1261,7 @@
 
               <!--? NEWLY ADDED MANGA -->
               <div class="home__manga">
-                <h2>Newly Added Manga</h2>
+                <h2 class="header__aside">Newly Added Manga</h2>
                 <div class="cards">
                   <!--* CARD 1 - NEW-MANGA-->
                   <div class="card newManga"></div>
@@ -1264,202 +1281,254 @@
               </div>
 
               <!--? WAIFUS -->
-              <!-- <div class="main__waifus">
-                <div class="main__waifus--wrapper">
-                  <div
-                    class="waifus"
-                    style="
-                      border-top-left-radius: 8px;
-                      border-bottom-left-radius: 8px;
-                    "
-                  >
+              <div class="home__waifus">
+                <h2 class="header__aside">Waifus</h2>
+                <div class="home__waifus--wrapper">
+                  <div class="home__waifus--column">
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/3319.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/780.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/5987.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/2708.png"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/1183.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/1185.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/3239.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/2735.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/3830.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/2080.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/5837.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/2814.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/859.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/252.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/763.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/1245.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/3427.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/1877.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/7273.png"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/5569.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/759.png"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/3937.jpeg"
+                        alt="waifu-image"
+                      />
+                    </div>
+
+                    <div class="waifu">
+                      <img
+                        class="image"
+                        src="https://cdn.waifu.im/3870.jpeg"
+                        alt="waifu-image"
+                      />
+                    </div>
+
+                    <div class="waifu">
+                      <img
+                        class="image"
+                        src="https://cdn.waifu.im/1939.png"
+                        alt="waifu-image"
+                      />
+                    </div>
+
+                    <div class="waifu">
+                      <img
+                        class="image"
+                        src="https://cdn.waifu.im/1337.jpeg"
+                        alt="waifu-image"
+                      />
+                    </div>
+
+                    <div class="waifu">
+                      <img
+                        class="image"
+                        src="https://cdn.waifu.im/1561.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
                   </div>
 
-                  <div
-                    class="waifus"
-                    style="
-                      border-top-right-radius: 8px;
-                      border-bottom-right-radius: 8px;
-                    "
-                  >
+                  <div class="home__waifus--column">
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/6665.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/2799.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/354.png"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/3981.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/626.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/629.png"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/3180.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/7128.png"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/7648.png"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/1989.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/4583.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/4602.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/512.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/6736.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/3810.png"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/3640.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/3658.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/7503.png"
+                        alt="waifu-image"
                       />
                     </div>
 
                     <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/678.jpeg"
-                        class="waifu__image"
-                        alt="waifu-name"
+                        class="image"
+                        src="https://cdn.waifu.im/3505.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
 
-                    <div class="waifu" style="height: 12%">
+                    <div class="waifu">
                       <img
-                        src="https://cdn.waifu.im/1733.png"
-                        class="waifu__image"
-                        alt="waifu-name"
-                        style="object-fit: cover; object-position: center"
+                        class="image"
+                        src="https://cdn.waifu.im/2007.jpeg"
+                        alt="waifu-image"
+                      />
+                    </div>
+
+                    <div class="waifu">
+                      <img
+                        class="image"
+                        src="https://cdn.waifu.im/6415.jpeg"
+                        alt="waifu-image"
+                      />
+                    </div>
+
+                    <div class="waifu">
+                      <img
+                        class="image"
+                        src="https://cdn.waifu.im/6463.jpeg"
+                        alt="waifu-image"
+                      />
+                    </div>
+
+                    <div class="waifu">
+                      <img
+                        class="image"
+                        src="https://cdn.waifu.im/4111.jpeg"
+                        alt="waifu-image"
+                      />
+                    </div>
+
+                    <div class="waifu">
+                      <img
+                        class="image"
+                        src="https://cdn.waifu.im/2048.jpeg"
+                        alt="waifu-image"
                       />
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
