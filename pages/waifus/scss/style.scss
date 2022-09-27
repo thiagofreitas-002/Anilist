@@ -15,6 +15,7 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -212,6 +213,52 @@ main {
     margin-top: 68px;
     min-height: 100vh;
 
+    .scroll__btn--top {
+      background-color: #161f2e;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 100;
+      /* display: none; */
+      transition: 1000ms ease-in-out;
+      border: none;
+
+      .fa-arrow-up {
+        transition: 1000ms;
+        color: #3db4f2;
+      }
+    }
+
+    .scroll__btn--bottom {
+      background-color: #161f2e;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      z-index: 100;
+      /* display: none; */
+      transition: 1000ms ease-in-out;
+      border: none;
+
+      .fa-arrow-down {
+        transition: 1000ms;
+        color: #3db4f2;
+      }
+    }
+
     .waifus__content {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -224,6 +271,105 @@ main {
           overflow: hidden;
 
           .image {
+            visibility: hidden;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            transform: scale(1.6);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+
+          /*.image1 {
+            visibility: hidden;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            transform: scale(1.6);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .image2 {
+            visibility: hidden;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            transform: scale(1.6);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .image3 {
+            visibility: hidden;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            transform: scale(1.6);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .image4 {
+            visibility: hidden;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            transform: scale(1.6);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .image5 {
+            visibility: hidden;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            transform: scale(1.6);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .image6 {
+            visibility: hidden;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            transform: scale(1.6);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          } */
+
+          .image1,
+          .image2,
+          .image3,
+          .image4,
+          .image5,
+          .image6 {
+            visibility: hidden;
             object-fit: contain;
             width: 100%;
             height: 100%;
@@ -237,6 +383,14 @@ main {
           }
         }
       }
+    }
+
+    .scroll__btn--top {
+      display: none;
+    }
+
+    .scroll__btn--bottom {
+      display: none;
     }
   }
 }
@@ -273,21 +427,28 @@ footer {
   color: tomato;
 }
 
-@media (max-width: 1200px) {
-  main {
-    .main__container {
-      .waifus__content {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-  }
-}
-
 @media (max-width: 1000px) {
   main {
     .main__container {
+      .scroll__btn--top {
+        display: flex;
+      }
+
       .waifus__content {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+
+        .waifu__column {
+          .waifu__image {
+            .image1,
+            .image2,
+            .image3,
+            .image4,
+            .image5,
+            .image6 {
+              transform: scale(1.1);
+            }
+          }
+        }
       }
     }
   }
@@ -317,17 +478,31 @@ footer {
   main {
     .main__container {
       .waifus__content {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+
+        .waifu__column {
+          .waifu__image {
+            .image1,
+            .image2,
+            .image3,
+            .image4,
+            .image5,
+            .image6 {
+              transform: scale(1.1);
+            }
+          }
+        }
       }
     }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 360px) {
   main {
     .main__container {
       .waifus__content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
     }
   }
