@@ -394,6 +394,9 @@ footer .footer__container .footer__content {
   main .main__container .scroll__btn--top {
     display: flex;
   }
+  main .main__container .scroll__btn--bottom {
+    display: flex;
+  }
   main .main__container .waifus__content {
     grid-template-columns: repeat(3, 1fr);
   }
