@@ -29,24 +29,30 @@ btnClickTop.addEventListener("click", () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
-/* ESCONDER ÍCONE */
-/* const showBtnTop = document.querySelector("#showBtnTop");
-window.onscroll = () => {
-  if (
-    document.body.scrollTop >= 2000 ||
-    document.documentElement.scrollTop >= 2000
-  ) {
-    showBtnTop.style.display = "block";
-  } else {
-    showBtnTop.style.display = "none";
-  }
-}; */
 
 const btnClickBottom = document.querySelector("#btnBottom");
 btnClickBottom.addEventListener("click", () => {
   document.body.scrollTop = 99999999999999999999999999999;
   document.documentElement.scrollTop = 99999999999999999999999999999;
 });
+
+/* ESCONDER ÍCONE */
+const showBtnTop = document.querySelector("#showBtnTop");
+const showBtnBottom = document.querySelector("#showBtnBottom");
+window.onscroll = () => {
+  if (
+    document.body.scrollTop >= 2000 ||
+    document.documentElement.scrollTop >= 2000
+  ) {
+    showBtnTop.style.display = "block";
+    showBtnBottom.style.display = "block";
+
+  } else {
+    showBtnTop.style.display = "none";
+    showBtnBottom.style.display = "none";
+  }
+};
+
 /* ESCONDER ÍCONE */
 /* const showBtnBottom = document.querySelector("#showBtnBottom");
 window.onscroll = () => {

@@ -299,6 +299,58 @@ main {
         border-top: 20px solid #161f2e;
         border-left: 20px solid #161f2e;
         border-bottom: 20px solid #161f2e;
+        position: relative;
+
+        /* BUTTON SCROLL
+        #showBtnTop { 
+          display: inline-block;
+          position: sticky;
+          .scroll__btn--top {
+            background-color: #161f2e;
+            height: 50px;
+            width: 50px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+            top: 10px;
+            right: 10px;
+            transition: 1000ms ease-in-out;
+            border: none;
+
+            .fa-arrow-up {
+              transition: 1000ms;
+              color: #3db4f2;
+            }
+          }
+        }
+
+        #showBtnBottom {
+          display: inline-block;
+          position: sticky;
+
+          .scroll__btn--bottom {
+            background-color: #161f2e;
+            height: 50px;
+            width: 50px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+            transition: 1000ms ease-in-out;
+            border: none;
+
+            .fa-arrow-down {
+              transition: 1000ms;
+              color: #3db4f2;
+            }
+          }
+        } */
 
         &::-webkit-scrollbar {
           width: 6px;
@@ -410,6 +462,92 @@ main {
             background-color: #11161c;
             color: #d3d5f3;
           }
+        }
+      }
+    }
+
+    .parallax__container {
+      width: 100%;
+      height: 500px;
+      margin-bottom: 25px;
+      overflow: hidden;
+      border-radius: 0px 4px 4px 0px;
+
+      .parallax__content {
+        background-image: url(https://cdn.waifu.im/7688.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        /* display: flex;
+        height: 100%; */
+
+        .shadowToRight {
+          display: grid;
+          grid-auto-rows: 460px;
+          grid-template-columns: 2fr 1fr;
+          gap: 20px;
+          background-image: linear-gradient(
+            to right,
+            rgba(12, 22, 34, 1),
+            rgba(12, 22, 34, 0)
+          );
+          padding: 20px;
+
+          .parallax__header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 100;
+
+            .parallax__card {
+              text-align: center;
+              .card__btn {
+                background-color: #161f2e;
+                padding: 8px 12px;
+                border-radius: 4px;
+                transition: 200ms ease-in;
+                display: inline-block;
+                text-align: center;
+                margin-top: 20px;
+
+                &:hover {
+                  color: #3db4f2;
+                }
+              }
+            }
+          }
+
+          .parallax__poster {
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .poster {
+              height: 100%;
+              width: 100%;
+              overflow: hidden;
+              border-radius: 4px;
+
+              .poster__image {
+                transform: scale(1.5);
+                transition: 200ms ease-in;
+                object-fit: cover;
+                object-position: center top;
+                height: 100%;
+                width: 100%;
+
+                &:hover {
+                  transform: scale(1.2);
+                }
+              }
+            }
+          }
+        }
+
+        .parallax__summary {
+          text-align: justify;
         }
       }
     }
@@ -541,7 +679,7 @@ main {
                 overflow: hidden;
 
                 .image {
-                  object-fit: fill;
+                  object-fit: contain;
                   width: 100%;
                   height: 100%;
                   transition: 200ms ease-in-out;
@@ -601,7 +739,7 @@ footer {
   border-right: 100px solid transparent;
 }
 
-@media (max-width: 765px) {
+@media (max-width: 720px) {
   header {
     .header__container {
       .header__content {
@@ -651,7 +789,40 @@ footer {
   }
 }
 
-@media (max-width: 756px) {
+@media (min-width: 720px) and (max-width: 1000px) {
+  main {
+    .main__container {
+      .home__content {
+        .home__aside {
+          .home__waifus {
+            .home__waifus--wrapper {
+              grid-template-columns: 1fr;
+
+              .home__waifus--column {
+                &:nth-child(2) {
+                  display: none;
+                }
+
+                .waifu {
+                  &:first-child {
+                    border-radius: 4px 4px 0px 0px;
+                  }
+
+                  &:last-child {
+                    border-radius: 0px 0px 4px 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Mover para @media (min-width: 720px) and (max-width: 1000px) */
+@media (max-width: 720px) {
   main {
     .main__container {
       .main__waifus {
@@ -686,13 +857,47 @@ footer {
         }
       }
 
+      .parallax__container {
+        .parallax__content {
+          .shadowToRight {
+            .parallax__poster {
+              .poster {
+                .poster__image {
+                  object-fit: cover;
+                  transform: scale(1);
+
+                  &:hover {
+                    transform: scale(1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
       .home__content {
         grid-template-columns: 1fr;
         background-color: tomato;
         height: 100px;
+        border-radius: 4px;
 
         .home__aside {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  main {
+    .main__container {
+      .parallax__container {
+        .parallax__content {
+          .shadowToRight {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
       }
     }

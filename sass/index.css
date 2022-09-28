@@ -261,6 +261,57 @@ main .main__container .main__waifus .main__waifus--background {
   border-top: 20px solid #161f2e;
   border-left: 20px solid #161f2e;
   border-bottom: 20px solid #161f2e;
+  position: relative;
+  /* BUTTON SCROLL
+  #showBtnTop { 
+    display: inline-block;
+    position: sticky;
+    .scroll__btn--top {
+      background-color: #161f2e;
+      height: 50px;
+      width: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+      top: 10px;
+      right: 10px;
+      transition: 1000ms ease-in-out;
+      border: none;
+
+      .fa-arrow-up {
+        transition: 1000ms;
+        color: #3db4f2;
+      }
+    }
+  }
+
+  #showBtnBottom {
+    display: inline-block;
+    position: sticky;
+
+    .scroll__btn--bottom {
+      background-color: #161f2e;
+      height: 50px;
+      width: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+      top: 10px;
+      left: 10px;
+      z-index: 100;
+      transition: 1000ms ease-in-out;
+      border: none;
+
+      .fa-arrow-down {
+        transition: 1000ms;
+        color: #3db4f2;
+      }
+    }
+  } */
   /* &::-webkit-scrollbar-track {
     background-color: #ddd;
     border-radius: 20px;
@@ -344,6 +395,79 @@ main .main__container .main__waifus .main__waifus--background .btn__more {
 main .main__container .main__waifus .main__waifus--background .btn__more:hover {
   background-color: #11161c;
   color: #d3d5f3;
+}
+main .main__container .parallax__container {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  border-radius: 0px 4px 4px 0px;
+}
+main .main__container .parallax__container .parallax__content {
+  background-image: url(https://cdn.waifu.im/7688.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  /* display: flex;
+  height: 100%; */
+}
+main .main__container .parallax__container .parallax__content .shadowToRight {
+  display: grid;
+  grid-auto-rows: 460px;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  background-image: linear-gradient(to right, rgb(12, 22, 34), rgba(12, 22, 34, 0));
+  padding: 20px;
+}
+main .main__container .parallax__container .parallax__content .shadowToRight .parallax__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+}
+main .main__container .parallax__container .parallax__content .shadowToRight .parallax__header .parallax__card {
+  text-align: center;
+}
+main .main__container .parallax__container .parallax__content .shadowToRight .parallax__header .parallax__card .card__btn {
+  background-color: #161f2e;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: 200ms ease-in;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+}
+main .main__container .parallax__container .parallax__content .shadowToRight .parallax__header .parallax__card .card__btn:hover {
+  color: #3db4f2;
+}
+main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster .poster__image {
+  transform: scale(1.5);
+  transition: 200ms ease-in;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+  height: 100%;
+  width: 100%;
+}
+main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster .poster__image:hover {
+  transform: scale(1.2);
+}
+main .main__container .parallax__container .parallax__content .parallax__summary {
+  text-align: justify;
 }
 main .main__container .home__content {
   display: grid;
@@ -455,8 +579,8 @@ main .main__container .home__content .home__aside .home__waifus .home__waifus--w
   overflow: hidden;
 }
 main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column .waifu .image {
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: 100%;
   transition: 200ms ease-in-out;
@@ -505,7 +629,7 @@ footer .footer__container .footer__content {
   border-right: 100px solid transparent;
 }
 
-@media (max-width: 765px) {
+@media (max-width: 720px) {
   header .header__container .header__content {
     justify-content: center;
   }
@@ -541,7 +665,22 @@ footer .footer__container .footer__content {
     margin-top: 68px;
   }
 }
-@media (max-width: 756px) {
+@media (min-width: 720px) and (max-width: 1000px) {
+  main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper {
+    grid-template-columns: 1fr;
+  }
+  main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column:nth-child(2) {
+    display: none;
+  }
+  main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column .waifu:first-child {
+    border-radius: 4px 4px 0px 0px;
+  }
+  main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column .waifu:last-child {
+    border-radius: 0px 0px 4px 4px;
+  }
+}
+/* Mover para @media (min-width: 720px) and (max-width: 1000px) */
+@media (max-width: 720px) {
   main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -550,12 +689,26 @@ footer .footer__container .footer__content {
     grid-auto-rows: 200px;
     grid-template-areas: "a b c" "a b c" "d e f" "d e f" "g h i" "g h i" "j k l" "j k l" "m n o" "m n o" "p q r" "p q r" "s t u" "s t u" "v w x" "v w x" "y y z" "y y z";
   }
+  main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster .poster__image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    transform: scale(1);
+  }
+  main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster .poster__image:hover {
+    transform: scale(1);
+  }
   main .main__container .home__content {
     grid-template-columns: 1fr;
     background-color: tomato;
     height: 100px;
+    border-radius: 4px;
   }
   main .main__container .home__content .home__aside {
     display: none;
+  }
+}
+@media (max-width: 360px) {
+  main .main__container .parallax__container .parallax__content .shadowToRight {
+    grid-template-columns: repeat(2, 1fr);
   }
 }/*# sourceMappingURL=index.css.map */
