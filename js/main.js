@@ -39,15 +39,17 @@ btnClickBottom.addEventListener("click", () => {
 /* ESCONDER ÍCONE */
 const showBtnTop = document.querySelector("#showBtnTop");
 const showBtnBottom = document.querySelector("#showBtnBottom");
+const showHomeBtn = document.querySelector("#showHomeBtn")
 window.onscroll = () => {
   if (
     document.body.scrollTop >= 2000 ||
     document.documentElement.scrollTop >= 2000
   ) {
+    showHomeBtn.style.display = "block";
     showBtnTop.style.display = "block";
     showBtnBottom.style.display = "block";
-
   } else {
+    showHomeBtn.style.display = "none";
     showBtnTop.style.display = "none";
     showBtnBottom.style.display = "none";
   }

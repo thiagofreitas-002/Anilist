@@ -186,45 +186,14 @@ main .main__container {
   margin-top: 68px;
   min-height: 100vh;
 }
-main .main__container .scroll__btn--top {
-  background-color: #161f2e;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  box-shadow: 0 1px 20px rgba(43, 50, 88, 0.3);
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 100;
-  transition: 1000ms ease-in-out;
-  border: none;
-}
-main .main__container .scroll__btn--top .fa-arrow-up {
-  transition: 1000ms;
-  color: #3db4f2;
-}
 main .main__container .scroll__btn--bottom {
-  background-color: #161f2e;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  box-shadow: 0 1px 20px rgba(43, 50, 88, 0.3);
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  z-index: 100;
-  transition: 1000ms ease-in-out;
-  border: none;
+  display: none;
 }
-main .main__container .scroll__btn--bottom .fa-arrow-down {
-  transition: 1000ms;
-  color: #3db4f2;
+main .main__container .home__btn {
+  display: none;
+}
+main .main__container .scroll__btn--top {
+  display: none;
 }
 main .main__container .waifus__content {
   display: grid;
@@ -304,9 +273,62 @@ footer .footer__container .footer__content {
   color: tomato;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   main .main__container .scroll__btn--top {
+    background-color: #161f2e;
+    height: 50px;
+    width: 50px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 1px 20px rgba(43, 50, 88, 0.3);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+    transition: 1000ms ease-in-out;
+    border: none;
+  }
+  main .main__container .scroll__btn--top .fa-arrow-up {
+    transition: 1000ms;
+    color: #3db4f2;
+  }
+  main .main__container .home__btn {
+    padding: 15.5px;
+    border-radius: 4px;
+    background-color: #161f2e;
+    position: fixed;
+    bottom: 10px;
+    right: 50%;
+    transform: translate(50%, 0px);
+    box-shadow: 0 1px 20px rgba(43, 50, 88, 0.3);
+    transition: 200ms;
+    text-transform: uppercase;
+    display: block;
+  }
+  main .main__container .home__btn:hover {
+    color: #3db4f2;
+  }
+  main .main__container .scroll__btn--bottom {
+    background-color: #161f2e;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 1px 20px rgba(43, 50, 88, 0.3);
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 100;
+    transition: 1000ms ease-in-out;
+    border: none;
+  }
+  main .main__container .scroll__btn--bottom .fa-arrow-down {
+    transition: 1000ms;
+    color: #3db4f2;
   }
   main .main__container .waifus__content {
     grid-template-columns: repeat(3, 1fr);
@@ -320,7 +342,7 @@ main .main__container .waifus__content .waifu__column .waifu__image .image6 {
     transform: scale(1.1);
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   header .header__container .header__content {
     justify-content: center;
   }
@@ -346,7 +368,7 @@ main .main__container .waifus__content .waifu__column .waifu__image .image6 {
     transform: scale(1.1);
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 450px) {
   main .main__container .waifus__content {
     grid-template-columns: 1fr;
   }

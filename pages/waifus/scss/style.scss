@@ -213,48 +213,16 @@ main {
     margin-top: 68px;
     min-height: 100vh;
 
-    .scroll__btn--top {
-      background-color: #161f2e;
-      height: 50px;
-      width: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 6px;
-      box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      z-index: 100;
-      transition: 1000ms ease-in-out;
-      border: none;
-
-      .fa-arrow-up {
-        transition: 1000ms;
-        color: #3db4f2;
-      }
+    .scroll__btn--bottom {
+      display: none;
     }
 
-    .scroll__btn--bottom {
-      background-color: #161f2e;
-      height: 50px;
-      width: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 6px;
-      box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      z-index: 100;
-      transition: 1000ms ease-in-out;
-      border: none;
+    .home__btn {
+      display: none;
+    }
 
-      .fa-arrow-down {
-        transition: 1000ms;
-        color: #3db4f2;
-      }
+    .scroll__btn--top {
+      display: none;
     }
 
     .waifus__content {
@@ -338,11 +306,70 @@ footer {
   color: tomato;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   main {
     .main__container {
+
       .scroll__btn--top {
+        background-color: #161f2e;
+        height: 50px;
+        width: 50px;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 100;
+        transition: 1000ms ease-in-out;
+        border: none;
+  
+        .fa-arrow-up {
+          transition: 1000ms;
+          color: #3db4f2;
+        }
+      }
+  
+      .home__btn {
+        padding: 15.5px;
+        border-radius: 4px;
+        background-color: #161f2e;
+        position: fixed;
+        bottom: 10px;
+        right: 50%;
+        transform: translate(50%, 0px);
+        box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+        transition: 200ms;
+        text-transform: uppercase;
+        display: block;
+  
+        &:hover {
+          color: #3db4f2;
+        }
+      }
+  
+      .scroll__btn--bottom {
+        background-color: #161f2e;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        box-shadow: 0 1px 20px rgb(43 50 88 / 30%);
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        z-index: 100;
+        transition: 1000ms ease-in-out;
+        border: none;
+  
+        .fa-arrow-down {
+          transition: 1000ms;
+          color: #3db4f2;
+        }
       }
 
       .waifus__content {
@@ -365,7 +392,7 @@ footer {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   header {
     .header__container {
       .header__content {
@@ -409,7 +436,7 @@ footer {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 450px) {
   main {
     .main__container {
       .waifus__content {

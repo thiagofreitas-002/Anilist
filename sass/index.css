@@ -186,9 +186,6 @@ main .main__container {
   padding-left: 50px;
   padding-right: 50px;
   margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 60px;
-  margin-top: 68px;
 }
 main .main__container .main__previews .main__preview--header {
   padding-left: 12px;
@@ -209,7 +206,7 @@ main .main__container .main__previews .list__preview {
   grid-auto-rows: 115px;
   padding: 20px;
   border-radius: 4px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   gap: 20px;
 }
 main .main__container .main__previews .list__preview .card {
@@ -357,7 +354,7 @@ main .main__container .main__waifus .main__waifus--background .main__waifus--wra
 main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image:hover {
   transform: scale(1.2);
 }
-main .main__container .main__waifus .main__waifus--background .waifu__gallery {
+main .main__container .main__waifus .main__waifus--background .main__waifu--grid {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -365,11 +362,11 @@ main .main__container .main__waifus .main__waifus--background .waifu__gallery {
   grid-template-areas: "a b c d" "a b c d" "a b e e" "f g h i" "f g h i" "j j h i" "k l m n" "k l m n" "o p q r" "o p q r" "o p s s" "w v u t" "w v u t" "x x u t" "y y z z" "y y z z";
   gap: 20px;
 }
-main .main__container .main__waifus .main__waifus--background .waifu__gallery .image {
+main .main__container .main__waifus .main__waifus--background .main__waifu--grid .image {
   overflow: hidden;
   border-radius: 8px;
 }
-main .main__container .main__waifus .main__waifus--background .waifu__gallery .image img {
+main .main__container .main__waifus .main__waifus--background .main__waifu--grid .image img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -378,7 +375,7 @@ main .main__container .main__waifus .main__waifus--background .waifu__gallery .i
   cursor: pointer;
   transform: scale(1.5);
 }
-main .main__container .main__waifus .main__waifus--background .waifu__gallery .image img:hover {
+main .main__container .main__waifus .main__waifus--background .main__waifu--grid .image img:hover {
   transform: scale(1);
 }
 main .main__container .main__waifus .main__waifus--background .btn {
@@ -396,84 +393,12 @@ main .main__container .main__waifus .main__waifus--background .btn__more:hover {
   background-color: #11161c;
   color: #d3d5f3;
 }
-main .main__container .parallax__container {
-  width: 100%;
-  height: 500px;
-  margin-bottom: 25px;
-  overflow: hidden;
-  border-radius: 0px 4px 4px 0px;
-}
-main .main__container .parallax__container .parallax__content {
-  background-image: url(https://cdn.waifu.im/7688.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  /* display: flex;
-  height: 100%; */
-}
-main .main__container .parallax__container .parallax__content .shadowToRight {
-  display: grid;
-  grid-auto-rows: 460px;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-  background-image: linear-gradient(to right, rgb(12, 22, 34), rgba(12, 22, 34, 0));
-  padding: 20px;
-}
-main .main__container .parallax__container .parallax__content .shadowToRight .parallax__header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 100;
-}
-main .main__container .parallax__container .parallax__content .shadowToRight .parallax__header .parallax__card {
-  text-align: center;
-}
-main .main__container .parallax__container .parallax__content .shadowToRight .parallax__header .parallax__card .card__btn {
-  background-color: #161f2e;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: 200ms ease-in;
-  display: inline-block;
-  text-align: center;
-  margin-top: 20px;
-}
-main .main__container .parallax__container .parallax__content .shadowToRight .parallax__header .parallax__card .card__btn:hover {
-  color: #3db4f2;
-}
-main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster {
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 4px;
-}
-main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster .poster__image {
-  transform: scale(1.5);
-  transition: 200ms ease-in;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center top;
-     object-position: center top;
-  height: 100%;
-  width: 100%;
-}
-main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster .poster__image:hover {
-  transform: scale(1.2);
-}
-main .main__container .parallax__container .parallax__content .parallax__summary {
-  text-align: justify;
-}
 main .main__container .home__content {
   display: grid;
   grid-template-columns: 4fr 3fr;
   -moz-column-gap: 40px;
        column-gap: 40px;
+  margin-bottom: 20px;
 }
 main .main__container .home__content .home__aside .header__aside {
   font-size: 0.9rem;
@@ -590,6 +515,113 @@ main .main__container .home__content .home__aside .home__waifus .home__waifus--w
 main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper .home__waifus--column .waifu .image:hover {
   transform: scale(1.2);
 }
+main .parallax__container {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+main .parallax__container .parallax__content {
+  background-image: url(https://www.serialminds.com/wp-content/uploads/2022/09/Cyberpunk-Edgerunners-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  /* display: flex;
+  height: 100%; */
+}
+main .parallax__container .parallax__content:hover .shadowToRight .teste .parallax__header .parallax__summary {
+  background-color: rgb(22, 31, 46);
+}
+main .parallax__container .parallax__content .shadowToRight {
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(12, 22, 34), rgba(12, 22, 34, 0));
+}
+main .parallax__container .parallax__content .shadowToRight .teste {
+  display: grid;
+  grid-auto-rows: 460px;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1150px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0 auto;
+  padding: 20px 50px;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  gap: 20px;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__header iframe {
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__header .parallax__card {
+  text-align: center;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__header .parallax__card h2 {
+  color: #3db4f2;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__header .parallax__card .card__btn {
+  background-color: #161f2e;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: 200ms ease-in;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__header .parallax__card .card__btn:hover {
+  color: #3db4f2;
+  transform: translateY(-2px);
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster {
+  height: 460px;
+  width: 255px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster .poster__image {
+  transform: scale(1.5);
+  transition: 200ms ease-in;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  width: 100%;
+}
+main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster .poster__image:hover {
+  transform: scale(1.2);
+}
+main .parallax__container .parallax__content .parallax__summary {
+  text-align: justify;
+  background-color: rgba(22, 31, 46, 0.8);
+  padding: 12px;
+  border-radius: 4px;
+  transition: 200ms ease-in-out;
+  text-align: justify;
+}
+main .parallax__container .parallax__content .parallax__summary p {
+  color: rgba(159, 173, 189, 0.7);
+  transition: 200ms ease-in;
+}
+main .parallax__container .parallax__content .parallax__summary p:hover {
+  color: rgb(159, 173, 189);
+}
 
 footer {
   background-color: #11161c;
@@ -629,7 +661,7 @@ footer .footer__container .footer__content {
   border-right: 100px solid transparent;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   header .header__container .header__content {
     justify-content: center;
   }
@@ -643,7 +675,7 @@ footer .footer__container .footer__content {
     display: none;
   }
 }
-@media (min-width: 1040px) and (max-width: 1540px) {
+@media (min-width: 1024px) and (max-width: 1540px) {
   main .main__container {
     width: 100%;
     max-width: 1140px;
@@ -653,6 +685,12 @@ footer .footer__container .footer__content {
     padding-top: 38px;
     margin-top: 68px;
   }
+  main .parallax__container .parallax__content .shadowToRight .teste {
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 1540px) {
   main .main__container {
@@ -661,11 +699,24 @@ footer .footer__container .footer__content {
     padding-left: 100px;
     padding-right: 100px;
     margin: 0 auto;
-    padding-top: 38px;
-    margin-top: 68px;
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste {
+    max-width: 1520px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0 auto;
   }
 }
-@media (min-width: 720px) and (max-width: 1000px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  main .main__container .main__previews {
+    margin-top: 108px;
+  }
+  main .main__container .main__previews .main__preview .list__preview {
+    justify-content: center;
+  }
+  main .main__container .main__previews .main__preview .list__preview .card:nth-child(n+13) {
+    display: none;
+  }
   main .main__container .home__content .home__aside .home__waifus .home__waifus--wrapper {
     grid-template-columns: 1fr;
   }
@@ -680,21 +731,35 @@ footer .footer__container .footer__content {
   }
 }
 /* Mover para @media (min-width: 720px) and (max-width: 1000px) */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+  main .main__container .main__previews {
+    margin-top: 108px;
+  }
+  main .main__container .main__previews .list__preview {
+    justify-content: center;
+  }
   main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
   }
-  main .main__container .main__waifus .main__waifus--background .waifu__gallery {
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus {
+    gap: 0px;
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu {
+    border-radius: 0px;
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image {
+    transform: scale(1.1);
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image:hover {
+    transform: scale(1.1);
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifu--grid {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 200px;
     grid-template-areas: "a b c" "a b c" "d e f" "d e f" "g h i" "g h i" "j k l" "j k l" "m n o" "m n o" "p q r" "p q r" "s t u" "s t u" "v w x" "v w x" "y y z" "y y z";
   }
-  main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster .poster__image {
-    -o-object-fit: cover;
-       object-fit: cover;
-    transform: scale(1);
-  }
-  main .main__container .parallax__container .parallax__content .shadowToRight .parallax__poster .poster .poster__image:hover {
+  main .main__container .main__waifus .main__waifus--background .main__waifu--grid .image img {
     transform: scale(1);
   }
   main .main__container .home__content {
@@ -706,9 +771,93 @@ footer .footer__container .footer__content {
   main .main__container .home__content .home__aside {
     display: none;
   }
+  main .parallax__container .parallax__content {
+    display: flex;
+  }
+  main .parallax__container .parallax__content .shadowToRight {
+    grid-template-columns: 1fr;
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste {
+    grid-template-columns: 1fr;
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__header {
+    position: relative;
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 42%);
+    display: none;
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster {
+    width: 150px;
+    height: auto;
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster .poster__image {
+    -o-object-fit: contain;
+       object-fit: contain;
+    transform: scale(1.2);
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster .poster__image:hover {
+    transform: scale(1.2);
+  }
 }
-@media (max-width: 360px) {
-  main .main__container .parallax__container .parallax__content .shadowToRight {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 450px) {
+  main .main__container {
+    max-width: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  main .main__container .main__previews .card:nth-child(n+9) {
+    display: none;
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus {
+    gap: 0px;
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu {
+    border-radius: 0px;
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image {
+    border-radius: 0px;
+    transform: scale(1.1);
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifus--wrapper .waifus .waifu .waifu__image:hover {
+    transform: scale(1.1);
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifu--grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 0px;
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifu--grid .image {
+    border-radius: 0;
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifu--grid .image img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    transform: scale(1.1);
+  }
+  main .main__container .main__waifus .main__waifus--background .main__waifu--grid .image img:hover {
+    transform: scale(1.1);
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster {
+    transform: translate(-50%, 43%);
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster {
+    width: 125px;
+    height: auto;
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster .poster__image {
+    -o-object-fit: contain;
+       object-fit: contain;
+    transform: scale(1.2);
+  }
+  main .parallax__container .parallax__content .shadowToRight .teste .parallax__poster .poster .poster__image:hover {
+    transform: scale(1.2);
   }
 }/*# sourceMappingURL=index.css.map */
